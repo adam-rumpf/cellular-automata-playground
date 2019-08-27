@@ -1,3 +1,14 @@
+/**
+ * Cellular Automata Playground
+ *
+ * A math toy originally written by Adam Rumpf in Spring 2012, updated Summer 2019.
+ *
+ * This is a Java applet for simulating various cellular automata. The main interface is a grid
+ * which can be clicked to change the states of cells, and time controls can be used to watch
+ * the system evolve as time advances. A variety of famous CAs (including Conway's Game of
+ * Life) are included, as are options for changing various other parameters.
+ */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -58,7 +69,7 @@ public class GameOfLife extends JFrame
     private JMenu sizeMenu; // dimensions of grid
     private JMenuItem clearItem, exitItem, randomizeItem;
     private JRadioButtonMenuItem conwayItem, haliteItem, conwayBodiesItem, seedsItem,
-        briansBrainItem;
+        briansBrainItem, oddItem, evenItem;
     private JRadioButtonMenuItem toroidalItem, onEdgesItem, offEdgesItem;
     private JRadioButtonMenuItem grid25x15item, grid50x30item, grid100x60item, grid200x120item;
     private JCheckBox visibleGridItem; // whether to draw the grid lines
@@ -69,7 +80,7 @@ public class GameOfLife extends JFrame
     protected int gridHeight = 30; // default height of game grid
     protected int[][] grid = new int[120][200]; // the cells of the game
     protected boolean filling; // whether clicking will fill or erase cells
-    private enum UpdateRule {CONWAY, HALITE, CONWAY_BODIES, SEEDS, BRIANS_BRAIN}; // game rules
+    private enum UpdateRule {CONWAY, HALITE, CONWAY_BODIES, SEEDS, BRIANS_BRAIN, ODD, EVEN}; // game rules
     private enum EdgeRule {TOROIDAL, ON_EDGES, OFF_EDGES}; // different edge rules
     protected UpdateRule updateRule = UpdateRule.CONWAY; // currently selected update rule
     protected EdgeRule edgeRule = EdgeRule.TOROIDAL; // currently selected edge rule
@@ -137,6 +148,10 @@ public class GameOfLife extends JFrame
         seedsItem.addActionListener(new UpdateRuleListener());
         briansBrainItem = new JRadioButtonMenuItem("Brian's Brain");
         briansBrainItem.addActionListener(new UpdateRuleListener());
+        oddItem = new JRadioButtonMenuItem("Odd Rule");
+        oddItem.addActionListener(new UpdateRuleListener());
+        evenItem = new JRadioButtonMenuItem("Even Rule");
+        evenItem.addActionListener(new UpdateRuleListener());
         
         toroidalItem = new JRadioButtonMenuItem("Toroidal Edges", true);
         toroidalItem.addActionListener(new EdgeRuleListener());
@@ -160,6 +175,8 @@ public class GameOfLife extends JFrame
         ruleGroup.add(haliteItem);
         ruleGroup.add(seedsItem);
         ruleGroup.add(briansBrainItem);
+        ruleGroup.add(oddItem);
+        ruleGroup.add(evenItem);
         
         ButtonGroup edgeGroup = new ButtonGroup();
         edgeGroup.add(toroidalItem);
@@ -180,6 +197,8 @@ public class GameOfLife extends JFrame
         optionMenu.add(haliteItem);
         optionMenu.add(seedsItem);
         optionMenu.add(briansBrainItem);
+        optionMenu.add(oddItem);
+        optionMenu.add(evenItem);
         optionMenu.addSeparator();
         optionMenu.add(toroidalItem);
         optionMenu.add(onEdgesItem);
@@ -441,6 +460,40 @@ public class GameOfLife extends JFrame
                             grid[i][j] = 0;
                         break;
                     
+                    case ODD:
+                        /*
+                         * Odd rules:
+                         * An off cell turns on if it has an odd number of neighbors. All on
+                         * cells turn off after one step.
+                         */
+                        if (grid[i][j] == 0)
+                        {
+                            if (tempGrid[i][j] % 2 == 1)
+                                grid[i][j] = 1;
+                            else
+                                grid[i][j] = 0;
+                        }
+                        else
+                            grid[i][j] = 0;
+                        break;
+                    
+                    case EVEN:
+                        /*
+                         * Even rules:
+                         * An off cell turns on if it has an even, nonzero number of
+                         * neighbors. All on cells turn off after one step.
+                         */
+                        if (grid[i][j] == 0)
+                        {
+                            if ((tempGrid[i][j] % 2 == 0) && (tempGrid[i][j] > 0))
+                                grid[i][j] = 1;
+                            else
+                                grid[i][j] = 0;
+                        }
+                        else
+                            grid[i][j] = 0;
+                        break;
+                    
                     default:
                         JOptionPane.showMessageDialog(null, "No update rule selected (somehow).",
                             "Error", JOptionPane.ERROR_MESSAGE);
@@ -637,6 +690,10 @@ public class GameOfLife extends JFrame
                 updateRule = UpdateRule.SEEDS;
             else if (briansBrainItem.isSelected())
                 updateRule = UpdateRule.BRIANS_BRAIN;
+            else if (oddItem.isSelected())
+                updateRule = UpdateRule.ODD;
+            else if (evenItem.isSelected())
+                updateRule = UpdateRule.EVEN;
             else // Unexpected selections default to Conway.
                 updateRule = UpdateRule.CONWAY;
         }
