@@ -12,7 +12,7 @@ The **File** menu includes controls for clearing the board and randomly seeding 
 
 The **Options** menu includes controls to change the rules of the CA model, including the following:
 
-##Cellular Automaton
+## Cellular Automaton
 
 * **Conway's Game of Life:** A live cell dies if it has less than two or more than four live neighbors, while a dead cell comes to life it if has exactly three live neighbors.
 * **Conway's Rules with Dying:** Same as above but cells do not immediately die, and instead change into a gray cell that simply takes up space and dies one round later.
@@ -22,7 +22,7 @@ The **Options** menu includes controls to change the rules of the CA model, incl
 * **Odd Rule:** A live cell dies after one time step, while a dead cell comes to life if it has an odd number of live neighbors.
 * **Even Rule:** Analogous to above but a dead cell coems to life if it has an even, nonzero number of live neighbors.
 
-##Edge Rules
+## Edge Rules
 
 * **Toroidal Edges:** Edges "wrap around" vertically and horizontally.
 * **Edges as Neighbors:** Acts as though all cells just beyond the bounds are always alive.
