@@ -2,6 +2,8 @@
 
 A program that lets you play around with various cellular automata to see how they evolve in real time.
 
+Click [here](https://github.com/adam-rumpf/cellular-automata-playground/releases/tag/v1.1) for the latest release.
+
 I wrote this program in Spring 2012 out of personal interest while taking a _Java_ class. At the time it was by far the most complicated project I had ever worked on. Hopefully it will be of interest to you now.
 
 The main display is a grid of black, white, and possibly gray cells. Black cells are alive, white are dead, and gray are an intermediate state present only for some CA models. Click on a dead cell to make it alive, or a live cell to kill it. Click and drag to change multiple cells.
