@@ -2,7 +2,7 @@
 
 A program that lets you play around with various cellular automata to see how they evolve in real time.
 
-Click [here](https://github.com/adam-rumpf/cellular-automata-playground/releases/tag/v1.1) for the latest release.
+Click [here](https://github.com/adam-rumpf/cellular-automata-playground/releases/tag/v1.1.1) for the latest release.
 
 I wrote this program in Spring 2012 out of personal interest while taking a _Java_ class. At the time it was by far the most complicated project I had ever worked on. Hopefully it will be of interest to you now.
 
