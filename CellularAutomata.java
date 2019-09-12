@@ -18,7 +18,7 @@ import java.lang.Math;
  * This applet displays a cellular automata. The user is given a variety of options to alter the
  * update rules, edge rules, size, etc.
  */
-public class GameOfLife extends JFrame
+public class CellularAutomata extends JFrame
 {
     /*
      * Contents:
@@ -26,7 +26,7 @@ public class GameOfLife extends JFrame
      * GUI-related definitions
      * Other definitions
      * Methods---------------------------------
-     * GameOfLife
+     * CellularAutomata
      * buildMenuBar
      * buildPanels
      * gridClear
@@ -101,9 +101,9 @@ public class GameOfLife extends JFrame
     /**
      * The constructor adds panels to the window.
      */
-    public GameOfLife()
+    public CellularAutomata()
     {
-        super("Game of Life");
+        super("Cellular Automata Playground");
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         buildMenuBar();
@@ -897,6 +897,6 @@ public class GameOfLife extends JFrame
      */
     public static void main(String[] args)
     {
-        new GameOfLife();
+        new CellularAutomata();
     }
 }
