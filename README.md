@@ -22,7 +22,7 @@ The **Options** menu includes controls to change the rules of the CA model, incl
 * **Seeds** A live cell dies after one time step, while a dead cell comes to life it it has exactly two live neighbors.
 * **Brian's Brain:** Same as above but cells do not immediately die, and instead change into a gray cell that simply takes up space and dies one round later.
 * **Odd Rule:** A live cell dies after one time step, while a dead cell comes to life if it has an odd number of live neighbors.
-* **Even Rule:** Analogous to above but a dead cell coems to life if it has an even, nonzero number of live neighbors.
+* **Even Rule:** Analogous to above but a dead cell comes to life if it has an even, nonzero number of live neighbors.
 
 ## Edge Rules
 
