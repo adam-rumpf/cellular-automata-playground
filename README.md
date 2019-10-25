@@ -34,12 +34,12 @@ The **Options** menu includes controls to change the rules of the CA model, incl
 
 ### Conway's Game of Life
 
-<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-01.png" alt="Conway's Game of Life" width="400"/>
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-01.png" alt="Conway's Game of Life" width="600"/>
 
 ### Halite Crystal Growth
 
-<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-02.png" alt="Halite Crystal Growth" width="400"/>
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-02.png" alt="Halite Crystal Growth" width="600"/>
 
 ### Brian's Brain
 
-<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-03.png" alt="Brian's Brain" width="400"/>
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-03.png" alt="Brian's Brain" width="600"/>
