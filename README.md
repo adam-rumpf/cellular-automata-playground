@@ -29,3 +29,17 @@ The **Options** menu includes controls to change the rules of the CA model, incl
 * **Toroidal Edges:** Edges "wrap around" vertically and horizontally.
 * **Edges as Neighbors:** Acts as though all cells just beyond the bounds are always alive.
 * **Edges as Empty:** Acts as though all cells just beyond the bounds are always dead.
+
+## Screenshots
+
+### Conway's Game of Life
+
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-01.png" alt="Conway's Game of Life" width="400"/>
+
+### Halite Crystal Growth
+
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-02.png" alt="Halite Crystal Growth" width="400"/>
+
+### Brian's Brain
+
+<img src="https://raw.githubusercontent.com/adam-rumpf/adam-rumpf.github.io/master/images/ca/ca-03.png" alt="Brian's Brain" width="400"/>
