@@ -1,5 +1,7 @@
 # Cellular Automata Playground
 
+<a href="https://adam-rumpf.itch.io/cellular-automata-playground"><img src="https://img.shields.io/badge/download-itch.io-fa5c5c?style=plastic&logo=itch.io&logoColor=white" alt="itch.io page"/></a> <a href="https://github.com/adam-rumpf/cellular-automata-playground/search?l=java"><img src="https://img.shields.io/badge/language-java-blue?style=plastic&logo=java&logoColor=white"/></a> <a href="https://github.com/adam-rumpf/cellular-automata-playground/releases"><img src="https://img.shields.io/github/v/release/adam-rumpf/cellular-automata-playground?style=plastic"/></a> <a href="https://github.com/adam-rumpf/cellular-automata-playground/blob/master/LICENSE"><img src="https://img.shields.io/github/license/adam-rumpf/cellular-automata-playground?style=plastic"/></a> <a href="https://github.com/adam-rumpf/cellular-automata-playground/commits/master"><img src="https://img.shields.io/maintenance/no/2019?style=plastic"/></a>
+
 A program that lets you play around with various cellular automata to see how they evolve in real time.
 
 Click [here](https://github.com/adam-rumpf/cellular-automata-playground/releases/tag/v1.1.1) for the latest release.
